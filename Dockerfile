@@ -1,6 +1,7 @@
 FROM eclipse-temurin:8-alpine
 RUN apk add curl wget openssl ca-certificates git nodejs-current npm
 RUN npm install -g yarn
+RUN npm i -g google-closure-compiler
 RUN mkdir /app
 WORKDIR /app
 RUN git clone https://github.com/ffha/unpkg.git
