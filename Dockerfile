@@ -1,6 +1,5 @@
-FROM node:12-alpine
 FROM eclipse-temurin:8-alpine
-RUN apk add curl wget openssl ca-certificates git
+RUN apk add curl wget openssl ca-certificates git nodejs-current npm
 RUN mkdir /app
 WORKDIR /app
 RUN git clone https://github.com/mjackson/unpkg.git
