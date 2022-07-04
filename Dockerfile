@@ -2,7 +2,7 @@ FROM alpine
 ENV JAVA_HOME=/opt/java/openjdk
 COPY --from=eclipse-temurin:11 $JAVA_HOME $JAVA_HOME
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
-RUN apk add curl wget openssl ca-certificates git nodejs-current npm gcc nodejs-current-dev python3
+RUN apk add curl wget openssl ca-certificates git nodejs-current npm gcc nodejs-current-dev python3 make
 RUN npm install -g yarn
 RUN npm i -g google-closure-compiler
 RUN mkdir /app
