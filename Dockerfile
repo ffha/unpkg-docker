@@ -1,5 +1,5 @@
 FROM node:12-alpine
-RUN apk add curl wget openssl ca-certificates
+RUN apk add curl wget openssl ca-certificates git
 RUN mkdir /app
 WORKDIR /app
 RUN git clone https://github.com/mjackson/unpkg.git
