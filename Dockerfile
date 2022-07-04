@@ -12,4 +12,4 @@ WORKDIR /app/unpkg
 RUN npm install
 RUN npm run build
 ENV NODE_ENV production
-CMD [ "node", "server.js" ]
+CMD [ "npm", "run", "start" ]
