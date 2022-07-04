@@ -10,6 +10,7 @@ WORKDIR /app
 RUN git clone https://github.com/unpkg/origin.git unpkg
 WORKDIR /app/unpkg
 RUN npm install
+RUN npm prune --production
 RUN npm run build
 ENV NODE_ENV production
 CMD [ "npm", "run", "start" ]
