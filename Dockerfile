@@ -7,7 +7,7 @@ RUN npm install -g yarn
 RUN npm i -g google-closure-compiler
 RUN mkdir /app
 WORKDIR /app
-RUN git clone https://github.com/ffha/unpkg.git
+RUN git clone https://github.com/unpkg/origin.git unpkg
 WORKDIR /app/unpkg
 RUN npm install
 RUN npm run build
