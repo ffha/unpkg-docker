@@ -2,5 +2,8 @@ FROM node:16-alpine
 RUN apk add curl wget openssl ca-certificates git python3 make build-base
 RUN mkdir /app
 WORKDIR /app
-RUN npm install unpkg-server2@1.0.1 --force
-CMD [ "node", "node_modules/unpkg-server2/server.js" ]
+RUN git clone https://github.com/ffha/unpkg-server.git
+RUN npm update
+RUN npm install
+RUN npm run build
+CMD [ "node", "server.js" ]
